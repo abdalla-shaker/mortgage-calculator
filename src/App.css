@@ -258,7 +258,7 @@
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .results {
+  .common-results-styles {
     border-bottom-left-radius: unset;
   }
 }
