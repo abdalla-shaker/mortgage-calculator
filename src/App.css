@@ -1,0 +1,264 @@
+#root {
+  width: 100%;
+  margin: auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mortgage-calc-container {
+  overflow: hidden;
+
+  width: 95%;
+  max-width: 90rem;
+  background-color: var(--white-color);
+  border-radius: 1.6rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.user-inputs {
+  padding: 3.2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4.8rem;
+}
+
+.title {
+  font-size: 2.4rem;
+  color: var(--slate-900-color);
+}
+
+.clear-btn {
+  border: none;
+  outline: none;
+  background-color: unset;
+  border-bottom: 2px solid #ccc;
+  font-weight: 600;
+  color: var(--slate-700-color);
+  cursor: pointer;
+}
+
+.input-field {
+  margin-bottom: 2.4rem;
+}
+
+.input-field-2 {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.inputs {
+  width: 100%;
+}
+
+.input-field label {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--slate-500-color);
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.input-label {
+  margin-bottom: 1.2rem;
+}
+
+.input-container {
+  display: flex;
+  border: 1px solid var(--slate-500-color);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.input-container label {
+  padding: 1.2rem;
+  background-color: var(--slate-100-color);
+}
+
+.input-container input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--slate-900-color);
+  padding: 0 1.6rem;
+}
+
+.radio-input-container {
+  width: 100%;
+  height: 3.8rem;
+  padding: 0 1.2rem;
+  border: 1px solid var(--slate-500-color);
+  border-radius: 4px;
+
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.radio-input-container:has(input:checked) {
+  border-color: var(--lime-color);
+  background-color: var(--very-light-lime-color);
+}
+
+.radio-input-container:has(input:checked) input[type="radio"] {
+  accent-color: transparent;
+}
+
+.radio-input-container:hover {
+  border-color: var(--lime-color);
+}
+
+.radio-input-container label {
+  height: 100%;
+  width: 100%;
+
+  color: var(--slate-900-color);
+
+  display: flex;
+  align-items: center;
+}
+
+.radio-input-container:nth-of-type(1) {
+  margin-bottom: 8px;
+}
+
+.last-field {
+  margin-bottom: 3.2rem;
+}
+
+.submit-btn {
+  border: none;
+  border-radius: 10rem;
+  outline: none;
+
+  font-weight: 700;
+  color: var(--slate-900-color);
+  background-color: var(--lime-color);
+  height: 4.8rem;
+  padding: 0 3.2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+  background-color: var(--light-lime-color);
+}
+
+.error-container .input-container {
+  border-color: var(--red-color);
+}
+
+.error-container .input-container label {
+  background-color: var(--red-color);
+  color: var(--white-color);
+}
+
+.error-text {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 8px;
+  color: var(--red-color);
+}
+
+.error-text.special-error {
+  margin-top: 1.2rem;
+}
+
+.common-results-styles {
+  background-color: var(--slate-900-color);
+  color: var(--white-color);
+  padding: 3.2rem;
+  border-bottom-left-radius: 8rem;
+}
+
+.common-results-styles h2 {
+  font-size: 2rem;
+  color: #eee;
+}
+
+.common-results-styles p {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.7;
+  color: var(--slate-500-color);
+}
+
+.no-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-results h2 {
+  margin-top: 1.2rem;
+}
+
+.no-results p {
+  text-align: center;
+}
+
+.results-container {
+  background-color: var(--slate-1000-color);
+  padding: 2.4rem;
+  margin-top: 3.2rem;
+  border-radius: 4px;
+  border-top: 3px solid var(--lime-color);
+}
+
+.monthly p {
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+.monthly h3 {
+  font-size: 4.4rem;
+  color: var(--lime-color);
+  padding-bottom: 3.2rem;
+  border-bottom: 1px solid var(--slate-900-color);
+}
+
+.yearly p {
+  margin-bottom: 1.2rem;
+}
+
+.yearly h3 {
+  font-size: 2rem;
+}
+
+@media (max-width: 920px) {
+  .mortgage-calc-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  body {
+    height: unset;
+  }
+
+  .mortgage-calc-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .results {
+    border-bottom-left-radius: unset;
+  }
+}
