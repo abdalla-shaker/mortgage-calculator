@@ -19,7 +19,7 @@ const Input = ({
           {label}
         </label>
         <div className="input-container">
-          <input type={type} id={id} name={name} {...props} />
+          <input type={type} id={id} name={name} pattern="[0-9]" {...props} />
           <label htmlFor={id}>{labelSign}</label>
         </div>
         {hasError && hasError.status && (
@@ -36,7 +36,7 @@ const Input = ({
       </label>
       <div className="input-container">
         <label htmlFor={id}>{labelSign}</label>
-        <input type={type} id={id} name={name} {...props} />
+        <input type={type} id={id} name={name} pattern="[0-9]" {...props} />
       </div>
       {hasError && hasError.status && (
         <p className="error-text">This field is required</p>
