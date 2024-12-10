@@ -33,6 +33,7 @@ const Form = ({ isError }) => {
           id="Rate"
           name="rate"
           hasError={isError.status && isError.termHasError.rate && isError}
+          maxLength="3"
           reversed
         />
       </div>
